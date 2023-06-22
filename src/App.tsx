@@ -1,24 +1,78 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Profile from "./components/profile/Profile";
+import Content from "./components/main/Content";
+import mainimg from "../src/components/assets/back-img.jpeg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="App grid grid-cols-12 px-14">
+      {/* Profile page */}
+      <div
+        className="profile-page bg-app-terinary-color col-span-3 transition ease-in-out min-h-full"
+        style={{ boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)" }}
+      >
+        <Profile />
+      </div>
+      <div
+        className="portfolio-content relative overflow-hidden w-screen bg-content-bg"
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          width: "95vw",
+          marginRight: "40px", // neeed to remove
+          height: "calc(100vh - 30px)",
+          transition: ".55s ease-in-out",
+        }}
+      >
+        <div
+          className="prt-curtain w-full h-full opacity-0"
+          style={{
+            background: "rgba(30,30,40,.88)",
+            transition: ".55s ease-in-out",
+            opacity: 0,
+            width: "100%",
+            height: "100%",
+          }}
+        ></div>
+        <div
+          className="absolute w-full top-0 overflow-hidden"
+          style={{
+            backgroundImage: `url(${mainimg})`,
+            overflow: "hidden",
+            position: "absolute",
+            width: "100%",
+            top: 0,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "end",
+            height: "400px",
+            boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <div
+            className="part-overlay relative w-full h-full"
+            style={{
+              backgroundImage:
+                "linear-gradient(180deg,rgba(30,30,40,.93) 0%,rgba(30,30,40,.96) 70%,rgba(30,30,40,.99) 80%,#1e1e28 100%)",
+            }}
+          ></div>
+        </div>
+      </div>
+      {/* <div className="col-span-8">
+        <div
+          className="min-h-min w-full"
+          style={{
+            backgroundImage: `url(${mainimg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            overflow: "hidden",
+            height: "400px",
+            boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
+          }}
+        ></div>
+      </div> */}
+      <div></div>
     </div>
   );
 }
