@@ -6,21 +6,20 @@ import mainimg from "../src/components/assets/back-img.jpeg";
 
 function App() {
   return (
-    <div className="App grid grid-cols-12 px-14">
+    <div className="App px-14 flex flex-row">
       {/* Profile page */}
-      <div
-        className="profile-page bg-app-terinary-color col-span-3 transition ease-in-out min-h-full"
+      {/* <div
+        className="profile-page bg-app-terinary-color col-span-3 transition ease-in-out min-h-full basis-2/6"
         style={{ boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)" }}
       >
         <Profile />
-      </div>
+      </div> */}
       <div
-        className="portfolio-content relative overflow-hidden w-screen bg-content-bg"
+        className="portfolio-content relative overflow-scroll w-screen bg-content-bg"
         style={{
           position: "relative",
-          overflow: "hidden",
+          // overflow: "scroll",
           width: "95vw",
-          marginRight: "40px", // neeed to remove
           height: "calc(100vh - 30px)",
           transition: ".55s ease-in-out",
         }}
@@ -58,21 +57,11 @@ function App() {
             }}
           ></div>
         </div>
+
+        <div style={{ position: "absolute", left: 0, top: 0, width: "100%" }}>
+          <Content />
+        </div>
       </div>
-      {/* <div className="col-span-8">
-        <div
-          className="min-h-min w-full"
-          style={{
-            backgroundImage: `url(${mainimg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            overflow: "hidden",
-            height: "400px",
-            boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
-          }}
-        ></div>
-      </div> */}
-      <div></div>
     </div>
   );
 }

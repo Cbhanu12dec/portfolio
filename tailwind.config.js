@@ -10,7 +10,9 @@ module.exports = {
       'app-terinary-color':"#20202a",
       'secondary':"#54595f",
       'banner-bg':"#1e1e28e0",
-      'content-bg':"#1e1e28"
+      'content-bg':"#1e1e28",
+      'app-yellow':"#ffc107",
+      'duration':"#8c8c8e"
     }
     ,
     fontFamily: {
