@@ -9,6 +9,12 @@ import "react-vertical-timeline-component/style.min.css";
 import { Button, Input } from "antd";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import Lottie from "lottie-react";
+import bannerani from "../assets/banner-ani.json";
+import Typed from "react-typed";
+import { MdAlternateEmail } from "react-icons/md";
+import { AiOutlineCopyrightCircle } from "react-icons/ai";
+import { BiDownload } from "react-icons/bi";
 function Content() {
   return (
     <div className="min-h-full flex justify-center flex-col">
@@ -18,48 +24,78 @@ function Content() {
           style={{ boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)" }}
         ></div>
         <div
-          className="h-80 mt-10 w-11/12"
+          className="mt-10 w-11/12"
           style={{
             backgroundImage: `url(${mainimg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
             zIndex: 99,
+            height: "25rem",
           }}
         >
           <div
-            className="h-full relative"
+            className="h-full relative flex flex-col-reverse items-end px-28"
             style={{
               backgroundImage:
                 "linear-gradient(90deg,rgba(45,45,58,.9) 15%,rgba(45,45,58,.7) 50%,rgba(43,43,53,.7) 100%)",
             }}
           >
-            <div className="absolute top-1/4 left-10 ">
-              <div className="text-5xl text-white font-Poppins font-extrabold tracking-wider">
-                Discover my Amazing
+            <div className="absolute top-1/4 left-10 mx-16">
+              <div className="text-2xl text-white font-Poppins font-extrabold tracking-wider">
+                Hello, It's Me
               </div>
-              <div className="text-5xl text-white font-Poppins font-bold tracking-wider">
-                Art Space!
+              <div className="text-6xl text-white font-Poppins font-bold tracking-wider my-2">
+                Bhanu Cheryala
               </div>
-              <div className="my-4">
+              <div className="my-4 text-2xl">
                 <span className="text-white">{`<`}</span>
                 <span className="text-app-yellow">code</span>
                 <span className="text-white">{`>`}</span>
-                <span className="text-white text-lg tracking-widest	">{` I am Software Engineer...! `}</span>
+                <span className="text-white tracking-wider font-semibold">
+                  <Typed
+                    strings={[
+                      "I'm a Student...!",
+                      "I'm a Full Stack Developer...!",
+                    ]}
+                    typeSpeed={50}
+                    backSpeed={40}
+                    loop
+                  />
+                </span>
                 <span className="text-white">{`<`}</span>
                 <span className="text-app-yellow">code</span>
                 <span className="text-white">{`/>`}</span>
               </div>
+              <Button
+                size={"large"}
+                style={{
+                  background: "#ffc107",
+                  color: "#000",
+                  borderRadius: 0,
+                  height: 60,
+                  outline: "none",
+                  border: "none",
+                  letterSpacing: 1.5,
+                  fontWeight: 600,
+                  marginTop: "24px",
+                }}
+              >
+                DOWNLOAD RESUME
+              </Button>
+            </div>
+            <div className="mr-32">
+              <Lottie animationData={bannerani} size={50} />
             </div>
           </div>
         </div>
       </div>
 
       {/* Stats Banner */}
-      <div className="my-6 flex flex-row mx-12">
+      <div className="my-6 flex flex-row mx-14">
         {PROFILE.MAINBANNER?.map((item) => {
           return (
-            <div className="stats-banner-item flex flex-row align-middle items-center ml-8">
+            <div className="stats-banner-item flex flex-row align-middle items-center mx-10 tracking-wider">
               <div className="text-3xl text-app-yellow font-semibold">
                 {item.COUNT}
               </div>
@@ -71,10 +107,10 @@ function Content() {
       {/*  Experiance and Education */}
       <div className="app-history flex flex-row mx-20 py-10">
         <div className="app-eductaion  basis-1/2 flex flex-col">
-          <div className="text-2xl text-app-yellow tracking-widest font-semibold">
+          <div className="text-3xl text-app-yellow tracking-wider font-medium font-Poppins">
             Education
           </div>
-          <div className="overflow-scroll">
+          <div className="overflow-scroll -mx-6 mt-2">
             <VerticalTimeline lineColor="#191923" layout="1-column-right">
               {PROFILE.EDUCATION?.map((item) => {
                 return (
@@ -98,13 +134,18 @@ function Content() {
                       marginTop: "18px",
                     }}
                   >
-                    <div className="w-full flex flex-row justify-between items-center ">
-                      <div className="text-lg font-Poppins ">{item.NAME}</div>
+                    <div className="w-full flex flex-row justify-between items-center px-6 mt-2">
+                      <div className="text-xl font-Poppins tracking-wider">
+                        {item.NAME}
+                      </div>
                       <div className="bg-app-terinary-color p-3 text-sm rounded-full text-duration">
                         {item.DURATION}
                       </div>
                     </div>
-                    <div className="text-duration mt-4">{item.INFO}</div>
+                    <div className="text-base text-duration px-6 italic tracking-wider font-medium">
+                      {item.ROLE}
+                    </div>
+                    <div className="text-duration mt-6 px-6">{item.INFO}</div>
                   </VerticalTimelineElement>
                 );
               })}
@@ -112,7 +153,7 @@ function Content() {
           </div>
         </div>
         <div className="app-eductaion basis-1/2 flex flex-col">
-          <div className="text-2xl text-app-yellow tracking-widest font-semibold">
+          <div className="text-3xl text-app-yellow tracking-wider font-medium font-Poppins ml-6">
             Work History
           </div>
           <div className="overflow-scroll">
@@ -139,13 +180,18 @@ function Content() {
                       marginTop: "18px",
                     }}
                   >
-                    <div className="w-full flex flex-row justify-between items-center ">
-                      <div className="text-lg font-Poppins ">{item.NAME}</div>
+                    <div className="w-full flex flex-row justify-between items-center px-6 mt-2">
+                      <div className="text-lg font-Poppins tracking-wider">
+                        {item.NAME}
+                      </div>
                       <div className="bg-app-terinary-color p-3 text-sm rounded-full text-duration">
                         {item.DURATION}
                       </div>
                     </div>
-                    <div className="text-duration mt-4">{item.INFO}</div>
+                    <div className="text-base text-duration px-6 italic tracking-wider font-medium">
+                      {item.ROLE}
+                    </div>
+                    <div className="text-duration mt-6 px-6">{item.INFO}</div>
                   </VerticalTimelineElement>
                 );
               })}
@@ -156,19 +202,21 @@ function Content() {
 
       {/* Projects */}
       <div className="app-projects mx-20 mb-10">
-        <div className="text-3xl text-white  font-semibold my-6">Projects</div>
+        <div className="text-3xl text-app-yellow tracking-wider font-medium font-Poppins">
+          Projects
+        </div>
 
         {PROFILE.PROJECTS?.map((item) => {
           return (
             <div
-              className="app-card px-10 py-6 w-1/3 rounded"
+              className="app-card px-10 py-5 w-1/3 rounded mt-8"
               style={{
                 background: "linear-gradient(159deg,#2d2d3a 0%,#2b2b35 100%)",
                 boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
               }}
             >
               <div className="flex flex-row justify-between items-center">
-                <div className="title text-white text-xl tracking-wider	">
+                <div className="title text-white text-xl tracking-wider font-medium">
                   {item.NAME}
                 </div>
                 <div className="bg-app-terinary-color p-3 text-sm rounded-full text-duration max-w-max my-4">
@@ -177,7 +225,9 @@ function Content() {
               </div>
 
               <div className="my-4 text-duration">{item.SHORTDESC}</div>
-              <div className="text-app-yellow cursor-pointer">VIEW MORE</div>
+              <div className="text-app-yellow cursor-pointer mb-4">
+                VIEW MORE
+              </div>
             </div>
           );
         })}
@@ -185,11 +235,11 @@ function Content() {
 
       {/* Contact Information */}
       <div className="contact-section flex flex-col mx-20">
-        <div className="text-3xl text-white  font-semibold my-6">
+        <div className="text-3xl text-app-yellow tracking-wider font-medium font-Poppins mt-4">
           Contact information
         </div>
 
-        <div className="contact-details grid grid-rows-2 grid-cols-2 gap-4">
+        <div className="contact-details grid grid-rows-1 grid-cols-2 gap-4 mt-8">
           <div
             className="py-6 rounded"
             style={{
@@ -243,8 +293,11 @@ function Content() {
             </div>
           </div>
         </div>
-        <div className="contact-mail-section my-6">
-          <div className="text-2xl text-white">Get in touch</div>
+        <div className="contact-mail-section mt-6 mx-1">
+          <div className="text-2xl text-white tracking-wider font-semibold">
+            Get in touch
+          </div>
+
           <div
             className="my-4 px-10 py-10"
             style={{
@@ -252,55 +305,92 @@ function Content() {
               boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
             }}
           >
-            <Input
-              style={{
-                background: "linear-gradient(159deg,#252532 0%,#23232d 100%)",
-                height: "60px",
-              }}
-              bordered={false}
-              prefix={
+            <div className="relative mb-6 w-11/12 rounded">
+              <div className="absolute inset-y-0 left-0 flex items-center px-4 pointer-events-none bg-app-terinary-color">
                 <BsFillPersonFill
-                  color="white"
+                  color="#8c8c8e"
                   height={40}
                   width={40}
-                  fontSize={"30px"}
+                  fontSize={"28px"}
                 />
-              }
-              size="large"
-              placeholder="large size"
-            />
+              </div>
+              <input
+                type="text"
+                id="input-group-1"
+                className="text-gray-900 text-lg focus:outline-none  block w-full pl-10 p-4 text-white ml-10 "
+                placeholder="Name"
+                style={{
+                  background: "linear-gradient(159deg,#252532 0%,#23232d 100%)",
+                }}
+              />
+            </div>
 
-            <Input
-              style={{
-                margin: "30px 0px",
-                background: "linear-gradient(159deg,#252532 0%,#23232d 100%)",
-                height: "60px",
-              }}
-              bordered={false}
-              prefix={
+            <div className="relative mb-6 w-11/12 rounded-md">
+              <div className="absolute inset-y-0 left-0 flex items-center px-4 pointer-events-none bg-app-terinary-color">
+                <MdAlternateEmail
+                  color="#8c8c8e"
+                  height={40}
+                  width={40}
+                  fontSize={"28px"}
+                />
+              </div>
+              <input
+                type="text"
+                id="input-group-1"
+                className="text-gray-900 text-lg focus:outline-none  block w-full pl-10 p-4 text-white ml-10 "
+                placeholder="Email"
+                style={{
+                  background: "linear-gradient(159deg,#252532 0%,#23232d 100%)",
+                }}
+              />
+            </div>
+            <div className="relative mb-6 w-11/12 rounded-md">
+              <div className="absolute inset-y-0 left-0  flex items-center px-4 pointer-events-none bg-app-terinary-color">
                 <MdEmail
-                  color="white"
+                  color="#8c8c8e"
                   height={40}
                   width={40}
-                  fontSize={"30px"}
+                  fontSize={"28px"}
                 />
-              }
-              size="large"
-              placeholder="large size"
-            />
-
+              </div>
+              <textarea
+                id="input-group-1"
+                className="text-gray-900 text-lg focus:outline-none  block w-full pl-10 p-4 text-white ml-10 "
+                placeholder="Message"
+                rows={4}
+                style={{
+                  background: "linear-gradient(159deg,#252532 0%,#23232d 100%)",
+                }}
+              />
+            </div>
             <Button
               size={"large"}
               style={{
                 background: "#ffc107",
                 color: "#000",
                 borderRadius: 0,
+                height: 60,
+                outline: "none",
+                border: "none",
                 letterSpacing: 1.5,
                 fontWeight: 500,
               }}
             >
               SEND MESSAGE
             </Button>
+          </div>
+        </div>
+
+        <div
+          className="py-4 px-10 mb-2 mt-10 flex flex-row items-center"
+          style={{
+            background: "linear-gradient(159deg,#2d2d3a 0%,#2b2b35 100%)",
+            boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)",
+          }}
+        >
+          <AiOutlineCopyrightCircle color="#8c8c8e" />
+          <div className="text-duration ml-2">
+            All Rights reserved by bhanu cheryala
           </div>
         </div>
       </div>
