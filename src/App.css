@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+.ant-progress.ant-progress-circle .ant-progress-text {
+  color: white !important;
+}
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #8c8c8e !important;
     margin-left: 20em !important;

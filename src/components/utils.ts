@@ -1,5 +1,5 @@
 export const PROFILE = {
-  NAME: "Bhanu Cheryala",
+  NAME: "@Bhanu Cheryala",
   DESIGNATION: "Software Engineer",
   EMAIL: "cheryalabhanu3@gmail.com",
   CLGMAIL: "bcheryala@albany.edu",
@@ -29,6 +29,22 @@ export const PROFILE = {
       name: "AWS",
       proficiency: 60,
     },
+    // {
+    //   name: "SPRING BOOT",
+    //   proficiency: 60,
+    // },
+    // {
+    //   name: "MONGODB",
+    //   proficiency: 60,
+    // },
+    // {
+    //   name: "MYSQL",
+    //   proficiency: 60,
+    // },
+    // {
+    //   name: "JENKINS",
+    //   proficiency: 60,
+    // },
   ],
   MAINBANNER: [
     {
