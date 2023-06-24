@@ -11,7 +11,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import Lottie from "lottie-react";
 import bannerani from "../assets/banner-ani.json";
-import Typed from "react-typed";
+// import Typed from "react-typed";
 import { MdAlternateEmail } from "react-icons/md";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import { BiDownload } from "react-icons/bi";
@@ -53,7 +53,8 @@ function Content() {
                 <span className="text-app-yellow">code</span>
                 <span className="text-white">{`>`}</span>
                 <span className="text-white tracking-wider font-semibold">
-                  <Typed
+                  I'm a Full Stack Developer...!
+                  {/* <Typed
                     strings={[
                       "I'm a Student...!",
                       "I'm a Full Stack Developer...!",
@@ -61,7 +62,7 @@ function Content() {
                     typeSpeed={50}
                     backSpeed={40}
                     loop
-                  />
+                  /> */}
                 </span>
                 <span className="text-white">{`<`}</span>
                 <span className="text-app-yellow">code</span>
