@@ -4,8 +4,14 @@ import { PROFILE } from "../utils";
 import profile from "../assets/profile1.jpeg";
 import { Avatar, Progress } from "antd";
 import { FaDownload } from "react-icons/fa";
-
+import resume from "../assets/resume.pdf";
 const Profile = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.download = "Bhanu-Cheryala-Resume";
+    link.href = resume;
+    link.click();
+  };
   return (
     <div className="profile-info max-h-screen relative">
       <div
@@ -100,7 +106,10 @@ const Profile = () => {
         </div>
 
         {/* fourth section */}
-        <div className="flex flex-row  py-6 align-middle items-center cursor-pointer  justify-center">
+        <div
+          className="flex flex-row  py-6 align-middle items-center cursor-pointer  justify-center"
+          onClick={handleDownload}
+        >
           <div className="text-sm text-secondary mr-3 tracking-wide capitalize font-semibold">
             DOWNLOAD RESUME
           </div>

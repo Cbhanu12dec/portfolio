@@ -11,11 +11,18 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import Lottie from "lottie-react";
 import bannerani from "../assets/banner-ani.json";
+import resume from "../assets/resume.pdf";
 // import Typed from "react-typed";
 import { MdAlternateEmail } from "react-icons/md";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import { BiDownload } from "react-icons/bi";
 function Content() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.download = "Bhanu-Cheryala-Resume";
+    link.href = resume;
+    link.click();
+  };
   return (
     <div className="min-h-full flex justify-center flex-col">
       <div className="w-full flex flex-col items-center relative mt-10">
@@ -82,6 +89,7 @@ function Content() {
                   fontSize: "12px",
                   marginTop: "24px",
                 }}
+                onClick={handleDownload}
               >
                 DOWNLOAD RESUME
               </Button>
