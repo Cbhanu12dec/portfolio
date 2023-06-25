@@ -26,6 +26,10 @@ export const PROFILE = {
       proficiency: 85,
     },
     {
+      name: "PYTHON",
+      proficiency: 65,
+    },
+    {
       name: "AWS",
       proficiency: 60,
     },
@@ -44,6 +48,26 @@ export const PROFILE = {
     {
       name: "JENKINS",
       proficiency: 60,
+    },
+    {
+      name: "AGILE",
+      proficiency: 60,
+    },
+    {
+      name: "JIRA",
+      proficiency: 60,
+    },
+    {
+      name: "NEST JS",
+      proficiency: 80,
+    },
+    {
+      name: "CYPRESS",
+      proficiency: 80,
+    },
+    {
+      name: "JEST JS",
+      proficiency: 65,
     },
   ],
   MAINBANNER: [

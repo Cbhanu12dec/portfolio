@@ -6,10 +6,10 @@ import mainimg from "../src/components/assets/back-img.jpeg";
 
 function App() {
   return (
-    <div className="App px-14 flex flex-row mt-2">
+    <div className="App px-2 md:px-14 flex flex-row mt-2">
       {/* Profile page */}
       <div
-        className="app-info-bar profile-page bg-app-terinary-color col-span-3 transition ease-in-out max-h-screen basis-[26%] relative"
+        className="app-info-bar profile-page bg-app-terinary-color col-span-3 transition ease-in-out max-h-screen basis-[26%] relative hidden md:block "
         style={{ boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)" }}
       >
         <Profile />
