@@ -29,22 +29,22 @@ export const PROFILE = {
       name: "AWS",
       proficiency: 60,
     },
-    // {
-    //   name: "SPRING BOOT",
-    //   proficiency: 60,
-    // },
-    // {
-    //   name: "MONGODB",
-    //   proficiency: 60,
-    // },
-    // {
-    //   name: "MYSQL",
-    //   proficiency: 60,
-    // },
-    // {
-    //   name: "JENKINS",
-    //   proficiency: 60,
-    // },
+    {
+      name: "SPRING BOOT",
+      proficiency: 60,
+    },
+    {
+      name: "MONGODB",
+      proficiency: 60,
+    },
+    {
+      name: "MYSQL",
+      proficiency: 60,
+    },
+    {
+      name: "JENKINS",
+      proficiency: 60,
+    },
   ],
   MAINBANNER: [
     {
@@ -78,7 +78,7 @@ export const PROFILE = {
   ],
   EXPERIANCE: [
     {
-      NAME: "Sudent Assistanceship, UAlbany",
+      NAME: "Sudent Assistanceship",
       ROLE: "Developer",
       DURATION: "Aug 2022 - Dec 2023",
       INFO: "Java, Data Structure, OS, Software Engineer",

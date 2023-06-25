@@ -9,7 +9,7 @@ function App() {
     <div className="App px-14 flex flex-row mt-2">
       {/* Profile page */}
       <div
-        className="profile-page bg-app-terinary-color col-span-3 transition ease-in-out max-h-screen basis-[28%]"
+        className="app-info-bar profile-page bg-app-terinary-color col-span-3 transition ease-in-out max-h-screen basis-[26%] relative"
         style={{ boxShadow: "0 3px 8px 0 rgba(15,15,20,.2)" }}
       >
         <Profile />
